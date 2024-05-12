@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.cdk-overlay-connected-position-bounding-box{
+    top: 10px !important;
+    left: 0px !important;
+}
+
+.mat-mdc-menu-panel {
+    min-width: 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+.cdk-overlay-pane{
+    width: 100% !important;
+}
+
+// .mat-mdc-menu-item{
+//     display: flex;
+//     justify-content: center !important;
+// }

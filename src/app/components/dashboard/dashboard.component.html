@@ -1,0 +1,62 @@
+<div>
+    <!-- heading -->
+    <div>
+        <h1 class="font-bold text-[24px]">Dashboard</h1>
+    </div>
+
+    <!-- Cards -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 mt-3">
+        <div>
+            <mat-card>
+                <mat-card-content>
+                    <div>
+                        <p class="font-medium text-[16px]">Orders</p>
+                        <p class="font-semibold text-[22px]">{{ this.dashboardService.totalOrders$ | async }}</p>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
+        <div>
+            <mat-card>
+                <mat-card-content>
+                    <div>
+                        <p class="font-medium text-[16px]">Revenue</p>
+                        <p class="font-semibold text-[22px]">{{ this.dashboardService.totalRevenue$| async }}</p>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
+        <div>
+            <mat-card>
+                <mat-card-content>
+                    <div>
+                        <p class="font-medium text-[16px]">Customers</p>
+                        <p class="font-semibold text-[22px]">{{ this.clientService.totalCustomers$ | async }}</p>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
+        <div>
+            <mat-card>
+                <mat-card-content>
+                    <div>
+                        <p class="font-medium text-[16px]">Categories</p>
+                        <p class="font-semibold text-[22px]">{{ this.dashboardService.totalCategories$ | async }}</p>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+
+    <!-- orders-list -->
+    <div class="mt-10">
+        <div>
+            <h2 class="text-[18px] font-medium">Recent Orders</h2>
+        </div>
+
+        <!-- here we are using seperate component to render sales list as if this may be used for sales module -->
+        <div>
+            <app-recent-sales ></app-recent-sales>
+        </div>
+    </div>
+</div>

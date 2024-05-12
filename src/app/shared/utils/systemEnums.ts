@@ -1,0 +1,1 @@
+export const API_URL = "https://services.odata.org/V3/Northwind/Northwind.svc/"
